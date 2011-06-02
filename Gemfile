@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem 'rack'
+gem 'unicorn'
 
 group :development, :test do
   gem 'maruku'
