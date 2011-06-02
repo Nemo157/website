@@ -1,6 +1,3 @@
-$header-footer-color: #2c302d;
-$border-style: solid 5px darken($header-footer-color, 10%);
-
 * {
   margin: 0px;
 }
@@ -16,28 +13,47 @@ body {
 }
 
 #left {
+  $color: #2c302d;
+  $border-style: solid 5px darken($color, 10%);
+
   height: 100%;
-  width: 10em;
   float: left;
   border-right: $border-style;
-  background-color: $header-footer-color;
+  background-color: $color;
 
   margin: 0px 10px 0px 0px;
 
   font-family: Tangerine, cursive;
   font-weight: bold;
+  font-size: 30px;
   text-shadow: 2px 2px 2px #1c201d;
+
+  width: 5em;
 
   #link {
     margin: 15px 0px 15px 10px;
 
     a {
-      font-size: 30px;
-
       color: #82a282;
       text-decoration: none;
     }
   }
+}
+
+#header {
+  height: 70px;
+  
+  font-family: Tangerine, cursive;
+  font-weight: bold;
+  font-size: 70px;
+  text-shadow: 3px 3px 3px #1c201d;
+
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+
+  color: white;
+  background-color: #3f3f3f;
+  border-bottom: solid 5px lighten(#3f3f3f, 10%);
 }
 
 #content {
