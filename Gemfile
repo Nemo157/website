@@ -9,11 +9,6 @@ group :development, :test do
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem 'growl',      :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'rb-inotify', :require => false if RUBY_PLATFORM =~ /linux/i
-  gem 'libnotify',  :require => false if RUBY_PLATFORM =~ /linux/i
-
-  gem 'rb-fchange', :require => false if RUBY_PLATFORM =~ /windows/i
-
   gem 'guard-haml',
         :git => 'git://github.com/Nemo157/guard-haml.git',
         :branch => 'internal'
