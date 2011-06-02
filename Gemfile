@@ -6,8 +6,8 @@ gem 'unicorn'
 group :development, :test do
   gem 'maruku'
 
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
-  gem 'growl',      :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'rb-fsevent', :require => false
+  gem 'growl',      :require => false
 
   gem 'guard-haml',
         :git => 'git://github.com/Nemo157/guard-haml.git',
