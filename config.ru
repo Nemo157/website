@@ -1,14 +1,16 @@
-run lambda { |env|
-  if env['REQUEST_PATH'] == '/'
-    env['REQUEST_PATH'] = '/index.html'
+class Redirector
+  def initialize app
+    @app = app
   end
 
-  code = 200
-  headers = {
-    'Content-Type'  => 'text/html',
-    'Cache-Control' => 'public, max-age=86400'
-  }
-  res = File.open File.join('public', env['REQUEST_PATH']), File::RDONLY
+  def call env
+    req = Rack::Request.new(env)
+    req.path_info = '/index.html' if req.path_info == '/'
+    @app.call env
+  end
+end
 
-  [code, headers, res]
-}
+use Redirector
+use Rack::Static, :urls => ['/'], :root => 'public'
+
+run lambda { |env| [404, {'Content-Type' => 'text/plain'}, []] }
