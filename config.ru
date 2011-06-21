@@ -1,14 +1,14 @@
-use Rack::Static,
-  :urls => ["/static"],
-  :root => "public"
-
 run lambda { |env|
-  [
-    200,
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => 'public, max-age=86400'
-    },
-    File.open('public/static/index.html', File::RDONLY)
-  ]
+  if env['REQUEST_PATH'] == '/'
+    env['REQUEST_PATH'] = '/index.html'
+  end
+
+  code = 200
+  headers = {
+    'Content-Type'  => 'text/html',
+    'Cache-Control' => 'public, max-age=86400'
+  }
+  res = File.open File.join('public', env['REQUEST_PATH']), File::RDONLY
+
+  [code, headers, res]
 }
