@@ -22,9 +22,10 @@ body {
   width: 5em; }
   #left #link {
     margin: 15px 0px 15px 10px; }
-    #left #link a {
-      color: #82a282;
-      text-decoration: none; }
+
+a {
+  color: #82a282;
+  text-decoration: none; }
 
 #header {
   height: 70px;

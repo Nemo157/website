@@ -32,17 +32,18 @@ body {
 
   #link {
     margin: 15px 0px 15px 10px;
-
-    a {
-      color: #82a282;
-      text-decoration: none;
-    }
   }
 }
 
+a {
+  color: #82a282;
+  text-decoration: none;
+}
+
 #header {
+  $color: #3f3f3f;
   height: 70px;
-  
+
   font-family: Tangerine, cursive;
   font-weight: bold;
   font-size: 70px;
@@ -52,8 +53,8 @@ body {
   padding: 10px 10px 10px 10px;
 
   color: white;
-  background-color: #3f3f3f;
-  border-bottom: solid 5px lighten(#3f3f3f, 10%);
+  background-color: $color;
+  border-bottom: solid 5px lighten($color, 10%);
 }
 
 #content {
