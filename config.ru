@@ -9,7 +9,7 @@ class Redirector
 
   def call env
     req = Rack::Request.new(env)
-    StatsMix.track(req.url) if StatsMix.api_key
+    StatsMix.track('hit', 1, url: req.url) if StatsMix.api_key
     req.path_info = '/index.html' if req.path_info == '/'
     @app.call env
   end
