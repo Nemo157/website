@@ -1,3 +1,5 @@
+require 'newrelic_rpm'
+
 class Redirector
   def initialize app
     @app = app
