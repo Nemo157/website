@@ -1,7 +1,8 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 gem 'rack'
 gem 'unicorn'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'maruku'
