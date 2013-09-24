@@ -1,4 +1,6 @@
-require 'newrelic_rpm'
+require 'statsmix'
+
+StatsMix.api_key = ENV['STATS_MIX_API_KEY']
 
 class Redirector
   def initialize app
@@ -7,6 +9,7 @@ class Redirector
 
   def call env
     req = Rack::Request.new(env)
+    StatsMix.track(req.url) if StatsMix.api_key
     req.path_info = '/index.html' if req.path_info == '/'
     @app.call env
   end

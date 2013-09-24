@@ -4,7 +4,7 @@ ruby '2.0.0'
 
 gem 'rack'
 gem 'unicorn'
-gem 'newrelic_rpm'
+gem 'statsmix'
 
 group :development, :test do
   gem 'maruku'

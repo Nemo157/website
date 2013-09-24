@@ -46,7 +46,6 @@ GEM
       syntax (>= 1.0.0)
     method_source (0.8.2)
     multi_json (1.8.0)
-    newrelic_rpm (3.6.7.159)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -61,6 +60,7 @@ GEM
     ref (1.0.5)
     sass (3.2.10)
     slop (3.4.6)
+    statsmix (1.0.0)
     syntax (1.0.0)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
@@ -81,8 +81,8 @@ DEPENDENCIES
   guard-livereload
   guard-sass
   maruku
-  newrelic_rpm
   rack
   rb-fsevent
+  statsmix
   therubyracer
   unicorn
