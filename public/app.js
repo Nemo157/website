@@ -7,4 +7,8 @@
     referrer: document.referrer
   });
 
+  ga('create', 'UA-47168520-1', 'nemo157.com');
+
+  ga('send', 'pageview');
+
 }).call(this);
