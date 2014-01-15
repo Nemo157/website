@@ -23,15 +23,26 @@ body {
 
   margin: 0px 10px 0px 0px;
 
-  font-family: Tangerine, cursive;
-  font-weight: bold;
-  font-size: 30px;
   text-shadow: 2px 2px 2px #1c201d;
 
-  width: 5em;
+  width: 200px;
+
+  #section_header:first-child {
+    margin-top: 15px;
+  }
+
+  #section_header {
+    color: white;
+    font-family: Tangerine, cursive;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 25px 0px 10px 10px;
+  }
 
   #link {
-    margin: 15px 0px 15px 10px;
+    font-family: merlano, sans-serif;
+    font-size: 20px;
+    margin: 5px 0px 5px 30px;
   }
 }
 
