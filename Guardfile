@@ -7,9 +7,9 @@ guard 'coffeescript',
     :output => 'public'
 
 guard 'haml', :output => 'public', :input => 'src' do
-  watch %r{^src/.+(\.html\.haml)}
+  watch %r{^src/.+(\.html\.haml)$}
 end
 
 guard 'livereload' do
-  watch %r{public/.+\.(css|js|html)}
+  watch %r{public/.+\.(css|js|html)$}
 end
