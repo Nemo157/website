@@ -12,6 +12,11 @@
   %body
     #page
       #left
+        #section_header Blog
+        #link
+          %a(title="Blog" href="http://blog.nemo157.com")
+            %img(src="images/blog.nemo157.com.png")
+            Nusquam
         #section_header Social
         #link
           %a(title="Twitter" href="http://twitter.com/#!/Nemo157")
@@ -71,23 +76,9 @@
       #header Locus Nullus
 
       #content
-        .me(itemscope itemtype="http://schema.org/Person")
-          %a(href="http://nemo157.com" itemprop="url")
-            Homepage
-          for&nbsp;
-          %a(href="mailto:ghostunderscore@gmail.com" itemprop="email")><
-            %span(itemprop="name")><
-              Wim Looman
-          , a
-          %span(itemprop="jobTitle")
-            software engineer
-          currently working at
-          %span(itemprop="worksFor" itemtype="http://schema.org/Organization")
-            %a(href="http://telogis.com" itemprop="url")><
-              %span(itemprop="name")><
-                Telogis
-            \.
+        :markdown
+          Homepage for [Wim Looman](mailto:ghostunderscore@gmail.com), a
+          software engineer currently working at [Telogis](http://telogis.com).
 
-          %p
-            Eventually I may get around to putting something here, for now
-            visiting the profiles linked on the left would be best.
+          Eventually I may get around to putting something here, for now
+          visiting the profiles linked on the left would be best.
